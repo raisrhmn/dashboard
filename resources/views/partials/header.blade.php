@@ -1,7 +1,7 @@
 <div id="kt_header" class="kt-header kt-grid kt-grid--ver  kt-header--fixed ">
     <div class="kt-header__brand kt-grid__item  " id="kt_header_brand">
         <div class="kt-header__brand-logo">
-            <a href="index.html">
+            <a href="{{route('home')}}">
                 <img alt="Logo" src="https://ui-avatars.com/api/?size=50&name=Alto&background=0D8ABC&color=fff" />
             </a>
         </div>

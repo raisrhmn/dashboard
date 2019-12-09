@@ -18,6 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::group(['middleware' => ['auth']], function() {
+    Route::get('/home', 'HomeController@index')->name('home');
     Route::get('/report', 'HomeController@index')->name('report');
     Route::get('/data-management', 'HomeController@index')->name('manage.data');
 });
@@ -27,6 +28,7 @@ Route::group(['prefix' => 'settings', 'middleware' => ['auth']], function() {
     Route::get('/banks', 'HomeController@index')->name('banks.index');
     Route::get('/roles', 'HomeController@index')->name('roles.index');
     Route::get('/users', ['uses' => 'UserController@index'])->name('users.index');
+    Route::get('/users/create', ['uses' => 'UserController@create'])->name('users.create');
     Route::get('/users/data', ['uses' => 'UserController@data'])->name('users.data');
     Route::get('/users/{id}', ['uses' => 'UserController@detail'])->name('users.detail');
 });

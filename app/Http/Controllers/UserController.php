@@ -22,6 +22,11 @@ class UserController extends Controller
         return view('users.index');
     }
 
+    public function create()
+    {
+        return view('users.form');
+    }
+
     public function data()
     {
         $query = $this->user->query();
